@@ -27,11 +27,14 @@ class DrogaRaiaSpider(scrapy.Spider):
         for product in response.css(PRODUCTS_SELECTOR):
             product_url = product.css(URL_SELECTOR).extract_first()
             self.products.append(product_url)
+        
         if "only_first_page" not in self.config or self.config["only_first_page"] is False:
             next_page = response.css(NEXT_PAGE_SELECTOR).extract_first()
-            if next_page:
+            if next_page is not None:
+                
                 next_url = next_page.replace(next_page[0],BASE_URL)
-                scrapy.Request(
+                print(f"NEXT URL:{next_url}")
+                yield scrapy.Request(
                     response.urljoin(next_url),
                     callback=self.parse
                 )
