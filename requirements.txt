@@ -1,2 +1,2 @@
-scrapy
-PyYAML
+scrapy==2.6.3
+PyYAML==6.0

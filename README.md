@@ -45,7 +45,7 @@ https://www.drogaraia.com.br/mamae-e-bebe.html
 
 # How to run using Docker
 
-To run the complete solution (**web crawler** + **web scrapping**) using Dockerfile, having set the variables in the config file **config.yaml**, just build the docker image by running the `make docker-build` command and run it with the `make docker-run` command
+To run the complete solution (**web crawler** + **web scrapping**) using Dockerfile, having set the variables in the config file **config.yaml**, just build the docker container by running the `make docker-build` command and run it with the `make docker-run` command
 
 # How to run locally
 

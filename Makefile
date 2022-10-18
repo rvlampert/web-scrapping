@@ -8,7 +8,7 @@ docker-build:
 
 docker-run:
 	@echo "--> Running Docker solution..."
-	docker run web_scrapping
+	docker run -it --rm --volume ${PWD}/results:/results web_scrapping
 
 run-spider:
 	@echo "--> Running spider..."
