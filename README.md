@@ -45,15 +45,15 @@ https://www.drogaraia.com.br/mamae-e-bebe.html
 
 # How to run using Docker
 
-To run the complete solution (`web crawler` + `web scrapping`) using Dockerfile, having set the variables in the config file `config.yaml`, just build the docker image by running the `make docker-build` command and run it with the `make docker-run` command
+To run the complete solution (**web crawler** + **web scrapping**) using Dockerfile, having set the variables in the config file **config.yaml**, just build the docker image by running the `make docker-build` command and run it with the `make docker-run` command
 
 # How to run locally
 
-To run it locally you must first install the dependencies with `make install-dependencies` and run the complete solution (`web crawler` + `web scrapping`) with `make run`.
+To run it locally you must first install the dependencies with `make install-dependencies` and run the complete solution (**web crawler** + **web scrapping**) with `make run`.
 
-Locally you can also run each solution separately, to run just the `web crawler` use the `make run-spider` command and to run `web srcapping` use the `make run-scrapping` command
+Locally you can also run each solution separately, to run just the **web crawler** use the `make run-spider` command and to run **web srcapping** use the `make run-scrapping` command
 
-By default the results will be saved in the `results` folder
+By default the results will be saved in the **results** folder
 
 # How to test
 
