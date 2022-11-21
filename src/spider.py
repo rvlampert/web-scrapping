@@ -9,7 +9,7 @@ from scrapy.crawler import CrawlerProcess
 logging.getLogger('scrapy').setLevel(logging.WARNING)
 logging.getLogger('scrapy').propagate = False
 
-BASE_URL = "https://www.drogaraia.com.br/"
+BASE_URL = "<URL da Drogas Raia>"
 
 PRODUCTS_SELECTOR = ".products"
 URL_SELECTOR = "a::attr(href)"

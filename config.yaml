@@ -1,10 +1,5 @@
 start_urls:
-  - https://www.drogaraia.com.br/medicamentos.html
-  - https://www.drogaraia.com.br/beleza.html
-  - https://www.drogaraia.com.br/cabelo.html
-  - https://www.drogaraia.com.br/bem-estar.html
-  - https://www.drogaraia.com.br/mamae-e-bebe.html
-
+  - <URL of Drogas Raia products>
 url_file_path: results/url_products.txt
 info_file_path: results/info_products.txt
 only_first_page: true

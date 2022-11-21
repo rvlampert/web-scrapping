@@ -9,7 +9,7 @@ def request_mock(mocker):
 
 def get_config(only_first_page=None):
     basic_config = {
-        "start_urls":["https://www.drogaraia.com.br/foo.html"],
+        "start_urls":["https://www.foo.com.br/bar.html"],
         "url_file_path": "url_products.txt",
         "info_file_path": "info_products.txt"
     }
@@ -23,8 +23,8 @@ def test_parse_whit_only_single_page_true(mocker, request_mock):
     
     spider = DrogaRaiaSpider()
     expected = [
-        "https://www.drogaraia.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
-        "https://www.drogaraia.com.br/needs-auto-teste-rapido-antigeno-covid-1-unidade.html",
+        "https://www.foo.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
+        "https://www.foo.com.br/needs-auto-teste-rapido-antigeno-covid-1-unidade.html",
     ]
     response = fake_response("fake_products.html")
     spider.parse(response)
@@ -38,8 +38,8 @@ def test_parse_whit_only_single_page_false(mocker,request_mock):
     spider = DrogaRaiaSpider()
     
     expected = [
-        "https://www.drogaraia.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
-        "https://www.drogaraia.com.br/needs-auto-teste-rapido-antigeno-covid-1-unidade.html",
+        "https://www.foo.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
+        "https://www.foo.com.br/needs-auto-teste-rapido-antigeno-covid-1-unidade.html",
     ]
     response = fake_response("fake_products.html")
     spider.parse(response)
@@ -53,8 +53,8 @@ def test_parse_whithout_only_single_page(mocker,request_mock):
     
     spider = DrogaRaiaSpider()
     expected = [
-        "https://www.drogaraia.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
-        "https://www.drogaraia.com.br/needs-auto-teste-rapido-antigeno-covid-1-unidade.html",
+        "https://www.foo.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
+        "https://www.foo.com.br/needs-auto-teste-rapido-antigeno-covid-1-unidade.html",
     ]
     response = fake_response("fake_products.html")
     spider.parse(response)
@@ -74,8 +74,8 @@ def test_parse_whithout_next_page(mocker,request_mock):
     
     spider = DrogaRaiaSpider()
     expected = [
-        "https://www.drogaraia.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
-        "https://www.drogaraia.com.br/needs-auto-teste-rapido-antigeno-covid-1-unidade.html",
+        "https://www.foo.com.br/losartana-potassica-50mg-medley-generico-com-30-comprimidos.html",
+        "https://www.foo.com.br/needs-auto-teste-rapido-antigeno-covid-1-unidade.html",
     ]
     response = fake_response("fake_products_without_next_page.html")
     spider.parse(response)
